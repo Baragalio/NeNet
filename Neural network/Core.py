@@ -22,7 +22,7 @@ cursor = sql_table.cursor()
 userid = 0
 where userid != -:
 	userid += 1
-	crsr.execute('SELECT colimns_of_answers from name_table WHERE id = userid')# подставить название таблицы и столбцов ответов
+	crsr.execute('SELECT colimns_of_answers from name_table WHERE id ='  + userid)# подставить название таблицы и столбцов ответов
 	Mas_x.append(crcr.fetchall())
 INPUT = len(Mas_x)
 X_train = Mas_x[range(0,8)]
@@ -30,14 +30,21 @@ X_test =  Mas_x[range(8,10)]
 userid = 0
 where userid != -:
 	userid += 1
-	crsr.execute('SELECT colimns_of_blocks from name_table WHERE id = userid')# подставить название таблице и столбцов блоков
+	crsr.execute('SELECT colimns_of_blocks from name_table WHERE id ='  + userid)# подставить название таблице и столбцов блоков
 	Mas_y.append(crcr.fetchall())
-y_train = Mas_y[range(0,8)]
+Y_train = Mas_y[range(0,8)]
 Y_test = Mas_y[range(8,10)]
 
 #Core
 model = Sequential() # пропробовать разные модели
-model.add(Dense(NB_CLASSES, input_dim = INPUT))
+model.add(Dense(NB_CLASSES, input_shape = INPUT))
 model.add(Activation('relu'))#выбрать функцию активации
 model.add(Dropout(DROPOUT))
+
+model.complite(loss = 'categorical_crossentropy', optimizer = OPTIMIZATOR, metrics = ['accuracy'])
+
+history = model.fit(X_train, Y_train, batch_size = BATCH_SIZE, epochs = NB_EPOCH, verbose = VERBOSE, validation_split = VALIDATION_SPLIT)
+
+#вывод тестового набора
+output = model.evaluate(X_test, Y_test, verbose = VERBOSE)
 
