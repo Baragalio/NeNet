@@ -35,11 +35,13 @@ where userid != -:
 Y_train = Mas_y[range(0,8)]
 Y_test = Mas_y[range(8,10)]
 
+
 #Core
 model = Sequential() # пропробовать разные модели
 model.add(Dense(NB_CLASSES, input_shape = INPUT))
 model.add(Activation('relu'))#выбрать функцию активации
 model.add(Dropout(DROPOUT))
+model.summary()
 
 #компиляция
 model.complite(loss = 'categorical_crossentropy', optimizer = OPTIMIZATOR, metrics = ['accuracy'])
