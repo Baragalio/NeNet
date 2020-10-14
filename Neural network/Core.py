@@ -41,10 +41,19 @@ model.add(Dense(NB_CLASSES, input_shape = INPUT))
 model.add(Activation('relu'))#выбрать функцию активации
 model.add(Dropout(DROPOUT))
 
+#компиляция
 model.complite(loss = 'categorical_crossentropy', optimizer = OPTIMIZATOR, metrics = ['accuracy'])
 
+# обучение
 history = model.fit(X_train, Y_train, batch_size = BATCH_SIZE, epochs = NB_EPOCH, verbose = VERBOSE, validation_split = VALIDATION_SPLIT)
 
-#вывод тестового набора
-output = model.evaluate(X_test, Y_test, verbose = VERBOSE)
+#Оценка точности
+accuracy = model.evaluate(X_test, Y_test, verbose = VERBOSE)
+print('Точность:', accuracy[1])
 
+#прогноз из бд
+sql_table = sql.connect('name_table_registration')
+userid =
+crsr.execute('SELECT colimns_of_answers from name_table WHERE id ='  + userid)
+registration_data = crcr.fetchall()
+output = model.predict(registration_data)
