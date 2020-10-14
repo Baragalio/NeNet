@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Регистрация</title>
     </head>
     <body>
-        <form method='POST'>
+        <h1>Вход</h1>
+        <form action="." method="post">
             {% csrf_token %}
             {{ form.as_p }}
+            <p><input type="submit" value="Войти"></p>
         </form>
     </body>
 </html>
