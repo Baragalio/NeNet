@@ -22,4 +22,5 @@ urlpatterns = [
     path('main/', include('main.urls')),
     path('login/', LoginView.as_view(), name="login"),
     path('logout/', logout_then_login, name="logout"),
+    path('', include('registration.urls') )
 ]
