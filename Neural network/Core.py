@@ -3,7 +3,8 @@ import numpy as np
 import _sqlite3 as sql
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation
-from keras.optimizers import SGD
+from keras.optimizers import SGD, Adam
+from keras.util import np_utils  # to_categorical
 # импортируем Данные
 
 NB_EPOCH = 1 #тестить(частота обучения на тестовом наборе)
@@ -12,7 +13,7 @@ VERBOSE = 2 # модель вывода(не трогать)
 NB_CLASSES = 1# кол-во выходов
 OPTIMIZATOR = SGD() # или другой оптимизатор
 VALIDATION_SPLIT = 0.2 # % контрольного набора
-DROPOUT = 0.2 #Прореживание
+DROPOUT = 0.05 #Прореживание
 INPUT = 10 # Вписать размер вектор векторов
 Mas_x[[]]
 Mas_y[[]]
@@ -32,15 +33,25 @@ where userid != -:
 	userid += 1
 	crsr.execute('SELECT colimns_of_blocks from name_table WHERE id ='  + userid)# подставить название таблице и столбцов блоков
 	Mas_y.append(crcr.fetchall())
+
 Y_train = Mas_y[range(0,8)]
 Y_test = Mas_y[range(8,10)]
 
+X_train = X_train.reshape(len(X_train), 7)
+X_test = X_test.reshape(len(X_test), 7)
+
+X_train = X_train.astype('float32') # уточнить нужный тип
+X_test = X_test.astype('float32')
+
+Y_train = np_utils.to_categorical(Y_train, NB_CLASSES) #точная библиотека
+Y_test = np_utils.to_categorical(Y_test, NB_CLASSES)
 
 #Core
 model = Sequential() # пропробовать разные модели
-model.add(Dense(NB_CLASSES, input_shape = INPUT))
-model.add(Activation('relu'))#выбрать функцию активации
+model.add(Dense(NB_CLASSES*12, input_shape = INPUT))
+model.add(Activation('adam'))#выбрать функцию активации
 model.add(Dropout(DROPOUT))
+model.add(Dense(NB_CLASSES,activation = 'softmax'))
 model.summary()
 
 #компиляция
