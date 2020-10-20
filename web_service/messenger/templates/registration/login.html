@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Вход</h1>
+        <form action="" method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <p><input type="submit" value="Войти"></p>
+            <input type="hidden" name="next" value="{{ next }}">
+            <input type="button" value="Регистрация" onclick="javascript:window.location='{% url 'registration' %}'"/>
+        </form>
+    </body>
+</html>
