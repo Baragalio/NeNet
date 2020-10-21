@@ -57,7 +57,8 @@ model.summary()
 #компиляция
 model.complite(loss = 'mean_squared_error', optimizer = OPTIMIZATOR, metrics = ['accuracy'])
 #старая функция потерь - categorical_crossentropy
-# обучение
+
+#обучение
 history = model.fit(X_train, Y_train, batch_size = BATCH_SIZE, epochs = NB_EPOCH, verbose = VERBOSE, validation_split = VALIDATION_SPLIT)
 
 #Оценка точности
