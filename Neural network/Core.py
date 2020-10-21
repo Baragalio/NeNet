@@ -3,7 +3,7 @@ import numpy as np
 import _sqlite3 as sql
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation
-from keras.optimizers import SGD, Adam
+from keras.optimizers import SGD, Adam, hard_sigmoid
 from keras.util import np_utils  # to_categorical
 # импортируем Данные
 
@@ -51,13 +51,14 @@ model = Sequential() # пропробовать разные модели
 model.add(Dense(NB_CLASSES*12, input_shape = INPUT))
 model.add(Activation('adam'))#выбрать функцию активации
 model.add(Dropout(DROPOUT))
-model.add(Dense(NB_CLASSES,activation = 'softmax'))
+model.add(Dense(NB_CLASSES,activation = 'hard_sigmoid')) #0 если X < -2.5, 1 если x > 2.5, 0.2*x+0.5 если -2.5 <=x<= 2.5
 model.summary()
 
 #компиляция
-model.complite(loss = 'categorical_crossentropy', optimizer = OPTIMIZATOR, metrics = ['accuracy'])
+model.complite(loss = 'mean_squared_error', optimizer = OPTIMIZATOR, metrics = ['accuracy'])
+#старая функция потерь - categorical_crossentropy
 
-# обучение
+#обучение
 history = model.fit(X_train, Y_train, batch_size = BATCH_SIZE, epochs = NB_EPOCH, verbose = VERBOSE, validation_split = VALIDATION_SPLIT)
 
 #Оценка точности
