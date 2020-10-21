@@ -22,6 +22,7 @@
     <list default="true" id="ba193b07-1561-47bd-80f8-2aab128bd32b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messenger/messenger/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/messenger/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messenger/registration/choices.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/registration/choices.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messenger/registration/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/registration/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messenger/registration/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/registration/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messenger/registration/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/registration/views.py" afterDir="false" />
@@ -91,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603129146795</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adding fields to registration">
+      <created>1603217644137</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603217644137</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,17 +142,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="web" />
     <MESSAGE value="Create login, logout, registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create login, logout, registration" />
+    <MESSAGE value="Adding fields to registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding fields to registration" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1603206586655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="395" y="90" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1603206586655" />
-    <state x="395" y="0" key="CommitChangelistDialog2" timestamp="1603129142556">
+    <state x="395" y="0" key="CommitChangelistDialog2" timestamp="1603217637416">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="395" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603129142556" />
+    <state x="395" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603217637416" />
     <state x="147" y="65" key="DiffContextDialog" timestamp="1602702676604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -161,10 +170,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603034160265" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603129172515">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603217662431">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603129172515" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603217662431" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602699250132">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
