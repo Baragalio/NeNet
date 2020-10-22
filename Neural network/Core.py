@@ -3,7 +3,7 @@ import numpy as np
 import _sqlite3 as sql
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation
-from keras.optimizers import SGD, Adam
+from keras.optimizers import SGD, Adam, hard_sigmoid
 from keras.util import np_utils  # to_categorical
 # импортируем Данные
 
@@ -49,10 +49,10 @@ Y_test = np_utils.to_categorical(Y_test, NB_CLASSES)
 
 #Core
 model = Sequential() # пропробовать разные модели
-model.add(Dense(NB_CLASSES*12, input_shape = INPUT))
-model.add(Activation('adam'))#выбрать функцию активации
+model.add(Dense(NB_CLASSES, activation = 'relu' ,input_shape = (INPUT,)))
 model.add(Dropout(DROPOUT))
-model.add(Dense(INPUT_ITOG,activation = 'hard_sigmoid')) #0 если X < -2.5, 1 если x > 2.5, 0.2*x+0.5 если -2.5 <=x<= 2.5
+model.add(Dense(NB_CLASSES, activation = 'relu'))
+model.add(Dense(INPUT_ITOG, activation = 'hard_sigmoid')) #0 если X < -2.5, 1 если x > 2.5, 0.2*x+0.5 если -2.5 <=x<= 2.5
 model.summary()
 
 #компиляция
