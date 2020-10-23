@@ -1,4 +1,6 @@
 #первый коммит
+from keras.models import load_model
+
 print ('Begin')
 print(1)
 print("Vostrikova add")
