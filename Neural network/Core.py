@@ -56,7 +56,7 @@ model.add(Dense(INPUT_ITOG, activation = 'hard_sigmoid')) #0 если X < -2.5, 
 model.summary()
 
 #компиляция
-model.complite(loss = 'mean_squared_error', optimizer = OPTIMIZATOR, metrics = ['accuracy'])
+model.compile(loss = 'mean_squared_error', optimizer = OPTIMIZATOR, metrics = ['accuracy'])
 #старая функция потерь - categorical_crossentropy
 
 #обучение
