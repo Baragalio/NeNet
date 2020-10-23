@@ -3,8 +3,8 @@ import numpy as np
 import _sqlite3 as sql
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation
-from keras.optimizers import SGD, Adam, hard_sigmoid
-from keras.util import np_utils  # to_categorical
+from keras.optimizers import SGD, Adam
+from keras.util import np_utils
 # импортируем Данные
 
 NB_EPOCH = 10 #тестить(частота обучения на тестовом наборе)
