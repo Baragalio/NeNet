@@ -69,7 +69,7 @@ Y_train = Data_otvet
 
 print(Y_train.shape)
 INPUT_ITOG = 8
-#Core
+#Core /\
 model = Sequential() # пропробовать разные модели
 model.add(Dense(NB_CLASSES, activation = 'relu' ,input_shape = (X_train.shape[1],)))
 model.add(Dropout(DROPOUT))
