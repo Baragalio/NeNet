@@ -2,60 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35f60898-f250-42c8-8b6f-9605028e5f65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web_service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web_service.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/login/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/login/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/login/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/login/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/login/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/login/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/login/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/main/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/main/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/main/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/main/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/main/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/main/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/main/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/main/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/messenger/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/messenger/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/messenger/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/messenger/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/messenger/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/choices.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/migrations/0002_information_age.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/migrations/0003_auto_20201020_1212.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/migrations/0004_auto_20201020_1536.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/migrations/0005_auto_20201020_2000.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/registration/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/static/images/chat1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/static/images/chat2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/static/images/friend1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/static/images/friend2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/static/images/group1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/static/images/group2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/static/images/help1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/static/images/help2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/static/images/setting1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/static/images/setting2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/templates/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/templates/registration/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/templates/registration/registration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/templates/registration/registration_success.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/product/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/product/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/registration/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/registration/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/shop/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
@@ -90,6 +43,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603451386212">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603451386212" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1603389017327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
