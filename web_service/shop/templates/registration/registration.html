@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <h1>Регистрация</h1>
+{% extends 'base.html'%}
+
+{% block content %}
+<div>
         <form action="." method="post">
-            {{ user_form.as_p }}
-            {{ inf_form.as_p }}
             {% csrf_token %}
-            <p><input type="submit" value="Зарегистрироваться"></p>
+            <div class="reg">
+                <h1>Регистрация</h1>
+                <br>
+                {{ user_form.as_p }}
+                {{ inf_form.as_p }}
+                {% csrf_token %}
+                <br>
+                <p><input class="btn" type="submit" value="Зарегистрироваться"></p>
+            </div>
         </form>
-    </body>
-</html>
+</div>
+{% endblock %}

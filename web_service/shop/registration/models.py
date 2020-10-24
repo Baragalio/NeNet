@@ -7,7 +7,7 @@ class Information(models.Model):
     age = models.IntegerField(verbose_name="Age", default=1)
     gender = models.IntegerField(verbose_name="Gender", default=1)
     season = models.IntegerField(verbose_name="Season", default=1)
-    sсope = models.IntegerField(verbose_name="Scope", default=1)
+    scope = models.IntegerField(verbose_name="Scope", default=1)
     purpose = models.IntegerField(verbose_name="Purpose", default=1)
     count_fr = models.IntegerField(verbose_name="Count_friends", default=1)
  

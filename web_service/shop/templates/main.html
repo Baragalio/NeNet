@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
-{% load static %}
-    <head>
-        <meta charset="UTF-8">
-        <link type="text/css" href='{% static "main.css" %}' rel="stylesheet">
-    </head>
-    <body>
-    <header>
-        <img src="/static/images/logo.png" align="left" >
-        <nav>
-            <div class="header">
-                <form>
-                    <input type="search" placeholder="Search" aria-label="Search">
-                    <button type="submit">Search</button>
-                </form>
-            </div>
+{% extends 'base.html'%}
 
-        </nav>
-
-    </header>
-        <h1>Главная</h1>
-        <p>Добро пожаловать на главную страницу!</p>
-        <input type="button" value="Выйти" onclick="javascript:window.location='{% url 'logout' %}'"/>
-    </body>
-</html>
+{% block menu %}
+    <div class="left_panel">
+        <ul>
+            <li><a>Каталог</a></li>
+            <li><a>Настройки</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
