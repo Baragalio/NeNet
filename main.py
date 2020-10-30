@@ -1,4 +1,5 @@
-
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 import numpy as np
 #import _sqlite3 as sql
 from keras.models import Sequential
@@ -22,10 +23,12 @@ def prediction(registration_data):
 		for i in j:
 			reg_data_2.append(i)
 	reg_data_2 = np.array([reg_data_2])
-	print(reg_data_2)
 	output = model.predict(reg_data_2)
-	return output
+	output = output.tolist()
+	return output[0]
 
 #data2 = [2,1,3,2,1,3,1]
 #h32 = prediction(data2)
 #print(h32)
+
+
