@@ -26,18 +26,18 @@ def prediction(registration_data):
 	output = model.predict(reg_data_2)
 	output = output.tolist()
 	#Абсолютный выход
-	'''
+
 	for i in range(len(output[0])):
 		if output[0][i] >= 0.5:
 			output[0][i] = 1
 		if output[0][i] <= 0.5:
 			output[0][i] = 0
-	'''
+
 	return output[0]
 
-data2 = [2,1,3,2,1,3,1]
-h32 = prediction(data2)
-print(h32)
-print(type(h32))
+#data2 = [2,1,3,2,1,3,1]
+#h32 = prediction(data2)
+#print(h32)
+#print(type(h32))
 
 
