@@ -63,3 +63,23 @@ for i in range(20000):
 rnd.shuffle(data)
 base = pd.DataFrame(data, columns=header)
 base.to_csv('database.csv')
+
+
+def help_button():
+
+def search_button():
+
+def account_button():
+
+def settings_button():
+
+def bascket():
+
+def theme():
+
+def rgb():
+
+def font():
+
+def functional():
+
