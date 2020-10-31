@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import RegistrationForm, InformationForm
 from .models import Information
-from .main import prediction
+#from .main import prediction
 
 def registration(request):
     if request.method == 'POST':
@@ -20,9 +20,9 @@ def registration(request):
             inf.scope = inf_form.cleaned_data['scope']
             inf.purpose = inf_form.cleaned_data['purpose']
             inf.count_fr = inf_form.cleaned_data['count_fr']
-            reg_data = prediction([inf.age, inf.gender, inf.color, inf.season, inf.scope, inf.purpose, inf.count_fr])
+            #reg_data = prediction([inf.age, inf.gender, inf.color, inf.season, inf.scope, inf.purpose, inf.count_fr])
             inf.save()
-            return render(request, 'registration/registration_success.html', {'reg_data': reg_data})
+            return render(request, 'registration/registration_success.html')#, {'reg_data': reg_data})
     else:
         user_form = RegistrationForm()
         inf_form = InformationForm()
