@@ -3,8 +3,8 @@
 {% block content %}
 <div>
         <form action="." method="post">
-            {% csrf_token %}
-            <div class="reg">
+             <div class="block">
+                <div class="block-inner">
                 <h1>Регистрация</h1>
                 <br>
                 {{ user_form.as_p }}
@@ -12,6 +12,7 @@
                 {% csrf_token %}
                 <br>
                 <p><input class="btn" type="submit" value="Зарегистрироваться"></p>
+                </div>
             </div>
         </form>
 </div>

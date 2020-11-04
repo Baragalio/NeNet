@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <div class="left_panel">
+            <ul>
+                <li><a href="{% url 'catalog:list_product' %}">Каталог</a></li>
+                <li><a href="{% url 'settings' %}">Настройки</a></li>
+            </ul>
+    </div>
+{% endblock %}
+{% block logout %}
+    <li><a href="{% url 'logout'%}">log out</a></li>
+{% endblock %}
+{% block content %}
+<div>
+        <form action="." method="post">
+            <div class="block">
+                <div class="block-inner">
+                <h1>Настройки профиля</h1>
+                <br>
+                <p>Имя пользователя: {{ username }}</p>
+                {{ inf_form.as_p }}
+                {% csrf_token %}
+                <br>
+                <p><input class="btn" type="submit" value="Сохранить"></p>
+                <input type="hidden" name="next" value="{{ next }}"/>
+                </div>
+            </div>
+        </form>
+</div>
+{% endblock %}

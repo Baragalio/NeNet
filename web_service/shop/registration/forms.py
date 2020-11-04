@@ -1,19 +1,21 @@
 from django.contrib.auth.models import User
 from django import forms
-from . import models
+from .models import Information
 from . import choices
 
 class RegistrationForm(forms.ModelForm):
-    password = forms.CharField(label="Password", widget=forms.PasswordInput)
-    password2 = forms.CharField(label="Repeat password", widget=forms.PasswordInput)
+    username = forms.CharField(label="Имя пользователя")
+    password1 = forms.CharField(label="Пароль", widget=forms.PasswordInput)
+    password2 = forms.CharField(label="Повторите пароль", widget=forms.PasswordInput)
 
     class Meta:
         model = User
-        fields = ('username',)
+        fields = ('username', )
+
 
     def clean_password2(self):
         data = self.cleaned_data
-        if data['password'] != data['password2']:
+        if data['password1'] != data['password2']:
             raise forms.ValidationError('Пароли не совпадают!')
         return data['password2']
 
@@ -30,5 +32,6 @@ class InformationForm(forms.ModelForm):
                                  choices=choices.COUNTS)
 
     class Meta:
-        model = models.Information
+        model = Information
         fields = ('age', 'gender', 'color', 'season', 'scope', 'purpose', 'count_fr')
+

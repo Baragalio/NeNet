@@ -1,11 +1,10 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 
 {% block menu %}
     <div class="left_panel">
-        <ul>
-            <li><a>Каталог</a></li>
-            <li><a>Настройки</a></li>
-        </ul>
+            <ul>
+                <li><a href="{% url 'catalog:list_product' %}">Каталог</a></li>
+                <li><a href="{% url 'settings' %}">Настройки</a></li>
+            </ul>
     </div>
-</div>
 {% endblock %}

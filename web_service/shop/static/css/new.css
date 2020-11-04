@@ -50,8 +50,6 @@ header input{
     list-style: none;
     float: left;
     text-align: center;
-    margin-left: 20%;
-
 }
 
 .top-menu ul li a {
@@ -126,7 +124,10 @@ footer div{
 }
 
 .content {
+    list-style: none;
+    display: inline-block;
     float: center;
+    width: 25px;
     font-size: 20px;
 }
 
@@ -139,4 +140,18 @@ footer div{
     height: 45px;
     font-size: 18px;
     border-radius: 5px;
+}
+.block {
+  margin-top: 5%;
+  position: relative;
+  float: left;
+  left: 50%;
+  font-size: 20px;
+}
+
+.block-inner {
+  position: relative;
+  float: left;
+  right: 50%;
+  padding: 10px;
 }

@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'login',
     'registration',
     'main',
-    'product'
+    'product',
+    'setting'
 ]
 
 MIDDLEWARE = [

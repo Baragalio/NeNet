@@ -3,7 +3,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/new.css' %}">
         <title>Интернет-магазин</title>
         <script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=D4ChtdODDr4-g4meYHQTZH0lTVsJAfign7UpzCyTrM5GkdKMgvsadjSMQdFdg3T-BsdfdlN0hVhjcNFCCbJP6Df6Mhu2Ur_LcgncGy5uAIhJNXbDbnI0YDFzMe-Q_SVGLEE87lrSe-rbzB-AbWZaWLPdj3xTPXrGi2FKwxfjp5IFUnByVgdiM1cqMUOLCb6-Sj9YoucLsW1zjz70eOORsLVuc5_MdAxuO8Y1-4MR0Ypf-09FNDl5FieJ16pMgnNk5hER9fbNsSksqmRoBrA-R8e_CKeIT5gOoaEgo5HtP-m_fEcAifMwoc9aKvHgjqdLQ2xADmEGS1DWzrv6LKCLEYhHLJhzVukshUS8a6b5o8UgY_fJWaiDIeRM7ypHs_mYzeiRCmZWWcEtz9KSOW0h_8Ut1lEvCos_cEnMUv3LF0nfpfHEbnVznsvoYEHAW5q9SkqR4udpri_rfqcweSC94w" charset="UTF-8"></script>
     </head>
@@ -14,6 +14,7 @@
             <ul>
                 <input type="search" placeholder="Search" aria-label="Search">
                 <li><a href="{% url 'login'%}">log in</a></li>
+                {% block logout %}{% endblock %}
             </ul>
         </div>
     </header>

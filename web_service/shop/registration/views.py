@@ -9,7 +9,7 @@ def registration(request):
         inf_form = InformationForm(request.POST)
         if user_form.is_valid() and inf_form.is_valid():
             new_user = user_form.save(commit=False)
-            new_user.set_password(user_form.cleaned_data['password'])
+            new_user.set_password(user_form.cleaned_data['password1'])
             new_user.save()
             inf = Information()
             inf.user = new_user
@@ -20,11 +20,16 @@ def registration(request):
             inf.scope = inf_form.cleaned_data['scope']
             inf.purpose = inf_form.cleaned_data['purpose']
             inf.count_fr = inf_form.cleaned_data['count_fr']
-            #reg_data = prediction([inf.age, inf.gender, inf.color, inf.season, inf.scope, inf.purpose, inf.count_fr])
             inf.save()
+            #reg_data = prediction([inf.age, inf.gender, inf.color, inf.season, inf.scope, inf.purpose, inf.count_fr])
+            #inf = Information.objects.create(user=new_user)
             return render(request, 'registration/registration_success.html')#, {'reg_data': reg_data})
     else:
         user_form = RegistrationForm()
         inf_form = InformationForm()
     return render(request, 'registration/registration.html', {'user_form': user_form, 'inf_form': inf_form})
+
+
+
+
 

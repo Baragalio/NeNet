@@ -4,13 +4,15 @@
 <div>
     <form action="" method="post" class="form">
     {% csrf_token %}
-    <div class="login">
+    <div class="block">
+        <div class="block-inner">
         <p><h1>Вход</h1></p>
         <br>
         {{ form.as_p }}
         <br>
         <input type="submit" value="Войти">
         <input type="button" value="Регистрация" onclick="javascript:window.location='{% url 'registration' %}'"/>
+        </div>
     </div>
     </form>
 

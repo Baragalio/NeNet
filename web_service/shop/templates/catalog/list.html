@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <div class="left_panel">
+            <ul>
+                <li><a href="{% url 'catalog:list_product' %}">Каталог</a></li>
+                <li><a href="{% url 'settings' %}">Настройки</a></li>
+            </ul>
+    </div>
+{% endblock %}
+{% block content %}
+<div class="block">
+    <div class="block-inner">
+    <h3>Категории</h3>
+    <ul>
+        <li>
+            <a href="{% url 'catalog:list_product' %}">All</a>
+        </li>
+        {% for c in categories %}
+            <li>
+                <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <h1>{% if category %}{{ category.name }}{% else %}Товары{% endif %}</h1>
+        {% for product in products %}
+            <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+            <p>{{ product.price }} p.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

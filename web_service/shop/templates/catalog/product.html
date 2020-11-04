@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <div class="left_panel">
+            <ul>
+                <li><a href="{% url 'catalog:list_product' %}">Каталог</a></li>
+                <li><a href="{% url 'settings' %}">Настройки</a></li>
+            </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="block">
+    <div class="block-inner">
+    <h1>{{ product.name }}</h1>
+    <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+    <p>{{ product.price }} p.</p>
+    <p>{{ product.description|linebreaks }}</p>
+    </div>
+</div>
+{% endblock %}
