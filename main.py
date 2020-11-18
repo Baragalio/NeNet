@@ -8,7 +8,7 @@ from keras.optimizers import SGD , Adam
 from keras.models import load_model
 from keras.utils import np_utils, to_categorical
 
-model = load_model('model.h5')
+model = load_model('model2.h5')
 
 def prediction(registration_data):
 	registration_data[0] = np_utils.to_categorical(registration_data[0], 6, dtype='int')
@@ -35,9 +35,9 @@ def prediction(registration_data):
 
 	return output[0]
 
-#data2 = [2,1,3,2,1,3,1]
-#h32 = prediction(data2)
-#print(h32)
-#print(type(h32))
+# data2 = [4,1,0,1,1,3,3]
+# h32 = prediction(data2)
+# print(h32)
+# print(type(h32))
 
 
