@@ -53,7 +53,7 @@ while userid != 20000:
 
 X = np.array(X)
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = VALIDATION_SPLIT, random_state=42)
 
 
 
@@ -67,10 +67,10 @@ model.summary()
 
 model.compile(loss = 'categorical_crossentropy', optimizer = OPTIMIZATOR, metrics = ['accuracy'])
 #обучение
-model.fit(X_train, y_train, batch_size = BATCH_SIZE, epochs = NB_EPOCH, verbose = VERBOSE, validation_split = 0.2)
+model.fit(X_train, y_train, batch_size = BATCH_SIZE, epochs = NB_EPOCH, verbose = VERBOSE, validation_split = VALIDATION_SPLIT)
 #оценка точности
 loss, accuracy = model.evaluate(X_test, y_test, verbose = VERBOSE)
 print('total loss: {} , total accuracy: {}'.format(loss,  accuracy))
 
-model.save('model2.h5')
+#model.save('model2.h5')
 
